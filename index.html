@@ -1,0 +1,45 @@
+echo "# index.html" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/sindhureddy62/index.html.git
+git push -u origin main
+
+<?php
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Handle form submission
+    $rollNo = $_POST['rollNo'];
+    $fullName = $_POST['fullName'];
+    $class = $_POST['class'];
+    $birthDate = $_POST['birthDate'];
+    $address = $_POST['address'];
+    $enrollmentDate = $_POST['enrollmentDate'];
+    
+    // Use JPDB or your preferred library to interact with the database
+    // Insert or update data as needed
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Enrollment Form</title>
+</head>
+<body>
+    <form method="POST" action="">
+        <label for="rollNo">Roll No:</label>
+        <input type="text" name="rollNo" id="rollNo" required>
+        <!-- Add other input fields for Full Name, Class, Birth Date, Address, Enrollment Date -->
+        
+        <button type="submit" name="save" id="save">Save</button>
+        <button type="submit" name="update" id="update">Update</button>
+        <button type="reset">Reset</button>
+    </form>
+
+    <script>
+        // Implement JavaScript logic to enable/disable buttons, handle form navigation, and data validation.
+    </script>
+</body>
+</html>
